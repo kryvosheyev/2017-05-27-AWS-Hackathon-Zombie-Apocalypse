@@ -1,0 +1,42 @@
+{
+  "User": {
+    "id": "axfglwp",
+    "password": "B109F3BBBC244EB82441917ED06D618B9008DD09B3BEFD1B5E07394C706A8BB980B1D7785E5976EC049B46DF5F1326AF5A2EA6D103FD07C95385FFAB0CACBC86",
+    "name": "Mark",
+    "contacts": [
+      "id1",
+      "id2",
+      "id3"
+    ],
+    "location": {
+      "lat": 123,
+      "lon": 123
+    },
+    "status": "panic",
+    "profession": "Medic"
+  },
+  "Locations": {
+    "user_id": "id1",
+    "location": {
+      "lat": 123,
+      "lon": 123
+    },
+    "timestamp": 124312412412
+  },
+  "ContactRequest": {
+    "receiver": "userId",
+    "sender": "userId",
+    "timestamp": 124312412412
+  },
+  "Messages": {
+    "receiver": "userId",
+    "sender": "userId",
+    "msg": "msg",
+    "source_location": {
+      "lat": 123,
+      "lon": 123
+    },
+    "msg_status": "received",
+    "timestamp": 124312412412
+  }
+}

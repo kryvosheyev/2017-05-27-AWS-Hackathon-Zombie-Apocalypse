@@ -1,0 +1,382 @@
+.main_section {
+  height: 100%;
+}
+
+.main_section, .container-fluid, .container-fluid .row, .chat_container,
+.chat_sidebar {
+  height: 100%;
+  box-shadow: 2px 0px 8px rgba(0,0,0,0.3);
+}
+.chat_sidebar {
+  overflow-y: auto;
+}
+.member_list {
+  height: calc(100% - 53px);
+  overflow-y: auto;
+}
+#custom-search-input {
+  margin: 0;
+  padding: 10px;
+  height: 53px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1565C0;
+  color: #fff;
+}
+
+#custom-search-input .input-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#custom-search-input .app-name {
+  flex: 10;
+  text-align: center;
+  font-weight: 200;
+  font-size: 23px;
+}
+
+ #custom-search-input .add-button {
+   border-radius: 50%;
+ }
+
+
+   #custom-search-input .search-query {
+     background: #fff none repeat scroll 0 0 !important;
+     border-radius: 4px;
+     height: 33px;
+     margin-bottom: 0;
+     padding-left: 7px;
+     padding-right: 7px;
+   }
+   #custom-search-input button {
+     background: none;
+     border: 0 none;
+     left: auto;
+     z-index: 9999;
+     text-shadow: none;
+     box-shadow: none;
+   }
+   #custom-search-input button span {
+     font-size: 15px;
+   }
+   .search-query:focus + button {
+   z-index: 3;
+   }
+   .all_conversation button {
+   background: #f5f3f3 none repeat scroll 0 0;
+   border: 1px solid #dddddd;
+   height: 38px;
+   text-align: left;
+   width: 100%;
+   }
+   .all_conversation i {
+   background: #e9e7e8 none repeat scroll 0 0;
+   border-radius: 100px;
+   color: #636363;
+   font-size: 17px;
+   height: 30px;
+   line-height: 30px;
+   text-align: center;
+   width: 30px;
+   }
+   .all_conversation .caret {
+   bottom: 0;
+   margin: auto;
+   position: absolute;
+   right: 15px;
+   top: 0;
+   }
+   .all_conversation .dropdown-menu {
+   background: #f5f3f3 none repeat scroll 0 0;
+   border-radius: 0;
+   margin-top: 0;
+   padding: 0;
+   width: 100%;
+   }
+   .all_conversation ul li {
+   border-bottom: 1px solid #dddddd;
+   line-height: normal;
+   width: 100%;
+   }
+   .all_conversation ul li a:hover {
+   background: #dddddd none repeat scroll 0 0;
+   color:#333;
+   }
+   .all_conversation ul li a {
+  color: #333;
+  line-height: 30px;
+  padding: 3px 20px;
+}
+  .member_list{
+  display:flex;
+  flex-direction:column;
+  justify:space-between;
+  height:100%;
+  height:calc(100% - 60px);
+  /*overflow-x: scroll;  */
+  }
+
+
+
+   .member_list .chat-body {
+   margin-left: 47px;
+   margin-top: 0;
+   }
+   .top_nav {
+   overflow: visible;
+   }
+   .member_list .contact_sec {
+   margin-top: 3px;
+   }
+
+   .member_list ul {
+     border-left: none;
+   }
+   .chat-img img {
+   height: 34px;
+   width: 34px;
+   }
+   .member_list li {
+   border-bottom: 1px solid #dddddd;
+   padding: 15px;
+   }
+   .member_list li:last-child {
+   border-bottom:none;
+   }
+
+   .sub_menu_ {
+  background: #e8e6e7 none repeat scroll 0 0;
+  left: 100%;
+  max-width: 233px;
+  position: absolute;
+  width: 100%;
+}
+.sub_menu_ {
+  background: #f5f3f3 none repeat scroll 0 0;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  display: none;
+  left: 100%;
+  margin-left: 0;
+  max-width: 233px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.all_conversation ul li:hover .sub_menu_ {
+  display: block;
+}
+.new_message_head button {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: medium none;
+}
+.new_message_head .user-info {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 20px;
+}
+.new_message_head .user-info-text {
+  height: 53px;
+  margin-right: 20px;
+  margin-left: 20px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .new_message_head {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+  }
+  .chat_sidebar {
+    display: none;
+  }
+  .chat_sidebar.menu-show {
+    display: block;
+  }
+  .message_section.menu-show {
+    display: none;
+  }
+}
+
+.message_section .row {
+  box-shadow: none;
+}
+
+.new_message_head .user-info-text div {
+  height: 13px;
+  line-height: 13px;
+  min-width: 30px;
+}
+
+.new_message_head {
+  padding-left: 10px;
+  box-shadow: 0px 3px 8px rgba(0,0,0,0.4);
+  background: #2196F3;
+  color: #fff;
+  float: left;
+  font-size: 15px;
+  font-weight: 300;
+  /*padding: 18px 10px;*/
+  width: 100%;
+  height: 53px;
+  line-height: 53px;
+}
+.searchWrapper{
+	height: 60px;
+}
+
+.chat_area {
+  position:relative;
+  margin: 0;
+  float: left;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify:space-between;
+
+
+
+  height:calc(100% - 180px);
+  background-image: url("assets/walking_dead.jpg");
+  color:white;
+}
+.chat_area li {
+  padding: 14px 14px 0;
+}
+.chat_area li .chat-img1 img {
+  height: 40px;
+  width: 40px;
+}
+.chat_area .chat-body1 {
+  margin-left: 50px;
+}
+.chat-body1 p {
+  background: #fbf9fa none repeat scroll 0 0;
+  padding: 10px;
+}
+.chat_area .admin_chat .chat-body1 {
+  margin-left: 0;
+  margin-right: 50px;
+}
+.chat_area li:last-child {
+  padding-bottom: 10px;
+}
+.message_write {
+  background: #96858F;
+  float: left;
+  padding: 15px;
+  width: 100%;
+  height: 130px;
+}
+.all_conversation{
+  background: #96858F;
+  display: none;
+}
+
+.message_write textarea.form-control {
+  height: 50px;
+  padding: 10px;
+}
+.chat_bottom {
+  float: left;
+  margin-top: 13px;
+  width: 100%;
+}
+.upload_btn {
+  color: #777777;
+}
+.sub_menu_ > li a, .sub_menu_ > li {
+  float: left;
+  width:100%;
+}
+.member_list li:hover {
+  background: #2196F3 none repeat scroll 0 0;
+  color: #fff;
+  cursor:pointer;
+}
+
+
+@media only screen and (max-width: 700px) {
+  .chat_area {
+  background:grey;
+  margin: 0;
+  opacity:.45;
+  }
+}
+
+.add-button {
+  text-shadow: none;
+  box-shadow: none;
+}
+
+.notification {
+  position: fixed;
+  z-index: 99999;
+  box-shadow: 3px 3px 8px rgba(0,0,0,0.4);
+  top: 15px;
+  right: 15px;
+  width: 200px;
+  height: 60px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  padding: 0px 10px;
+  border-radius: 3px;
+}
+
+.notification .msg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+  width: calc(100% - 60px);
+  height: 100%;
+  padding-left: 10px;
+}
+
+.notification .notification-go {
+  color: #2196F3;
+  border-left: 1px solid #2196F3;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.notification .notification-name {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.notification .notification-text {
+  font-size: 13px;
+  overflow: hidden;
+  width: 100px;
+}
+
+
+
+
+
+
+
+
+

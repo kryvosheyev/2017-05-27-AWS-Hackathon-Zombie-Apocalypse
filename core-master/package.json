@@ -1,0 +1,40 @@
+{
+  "name": "core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "serverless deploy -v --stage dev",
+    "deploy:prod": "serverless deploy -v --stage v1",
+    "deploy-func": "serverless deploy function --stage dev -f",
+    "deploy-func:prod": "serverless deploy function --stage v1 -f",
+    "lint": "eslint .",
+    "fix": "eslint --fix .",
+    "test": "mocha --recursive",
+    "invoke": "serverless invoke --path test-event.json -l -f",
+    "invoke-local": "serverless invoke local --path test-event.json -l -f",
+    "clear": "serverless remove && serverless remove --stage production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AWS-Zombie-No-Team/core.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AWS-Zombie-No-Team/core/issues"
+  },
+  "homepage": "https://github.com/AWS-Zombie-No-Team/core#readme",
+  "dependencies": {
+    "aws-response": "^1.2.0",
+    "aws-sdk": "^2.58.0",
+    "moment": "^2.18.1",
+    "uuid": "^3.0.1"
+  },
+  "devDependencies": {
+    "json-loader": "^0.5.4",
+    "mocha": "^3.2.0",
+    "serverless-plugin-webpack": "1.0.0",
+    "webpack": "2.4.1"
+  }
+}

@@ -1,0 +1,41 @@
+<div *ngIf="user" class="chat">
+  <div class="chat_header">
+    <div class="chat_img">
+      <img src="{{user.avatar}}" alt="User Avatar" class="chat_header_img">
+    </div>
+    <div class="chat_info">
+      <div class="chat_id">{{user.id}}</div>
+      <div class="chat_prof">{{user.profession}}</div>
+    </div>
+    <div class="chat_location">
+      <span *ngIf="user.location && user.location.lat">
+        {{user.location.lat}}, {{user.location.lon}}
+      </span>
+
+    </div>
+
+  </div>
+
+  <div *ngIf="user" class="chat-messages" id="chat-messages">
+
+    <div *ngFor="let message of messages" class="messages-list">
+      <div class="message" [ngClass]="{'message': true, 'right': message.sender === currentUser.id}">
+        <div class="user-name">{{message.sender}}</div>
+        <div class="message-text">
+          <div class="text">{{message.msg}}</div>
+          <div class="message-date">Sun</div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <div class="message_bottom">
+    <input [(ngModel)]="message" class="message_input"
+    placeholder="Write a message..." (keyup.enter)="sendMessage()"/>
+    <div (click)="sendMessage()" class="send_button">
+      <i class="glyphicon glyphicon-send"></i>
+    </div>
+  </div>
+
+</div>
